@@ -129,9 +129,10 @@ function createButtonAndTopCanvas() {
 
 async function createTopChart() {
   const proxy = "https://cors-anywhere.herokuapp.com/";
-  const request = "https://localhost/phpfiles/Data-viz/randomData.php";
+  const request = "http://localhost/phpfiles/Data-viz/randomData.php";
   // const request = "https://canvasjs.com/services/data/datapoints.php";
-  let response = await fetch(proxy + request);
+  console.log(request);
+  let response = await fetch(request);
   graphData = await response.json();
   let xAxis = [];
   let data3 = [];
